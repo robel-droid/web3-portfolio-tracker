@@ -17,17 +17,54 @@ Fetches and displays the current ETH balance for a given public Ethereum address
 
 ## Setup & Run
 
-1.  **Clone:** `git clone <your-repo-url>`
-2.  **Backend:**
-    - `cd backend`
-    - `npm install`
-    - Create `.env` file (see `.env.example` if provided, or docs) and add `ETHERSCAN_API_KEY=YOUR_KEY`.
-    - `npm run dev` (starts on port 5001 by default)
-3.  **Frontend:**
-    - `cd ../frontend`
-    - `npm install`
-    - `npm run dev` (starts on port 5173 by default)
-4.  **Access:** Open `http://localhost:5173` (or the port shown) in your browser.
+1.  **Clone:** `git clone https://github.com/robel-droid/web3-portfolio-tracker.git`
+
+    ```bash
+    git clone https://github.com/robel-droid/web3-portfolio-tracker.git
+    cd web3-portfolio-tracker
+    ```
+
+2.  **Backend Setup:**
+
+    - Navigate to the backend directory:
+      ```bash
+      cd backend
+      ```
+    - Install dependencies:
+      ```bash
+      npm install
+      ```
+    - **Create Environment File:** Create a file named `.env` in the `backend` directory.
+    - **Add API Key:** Inside the `.env` file, add your Etherscan API key. Get a free key from [https://etherscan.io/apis](https://etherscan.io/apis). The file content should look like this:
+      ```.env
+      # backend/.env
+      ETHERSCAN_API_KEY=YOUR_ACTUAL_ETHERSCAN_API_KEY_HERE
+      # PORT=5001 # Optional: Specify a port, defaults to 5001
+      ```
+      _(Replace `YOUR_ACTUAL_ETHERSCAN_API_KEY_HERE` with your real key. Ensure the `.env` file is listed in your root `.gitignore`)_
+    - **Run Backend:** Start the development server:
+      ```bash
+      npm run dev
+      ```
+      _(Server runs on port 5001 by default)_
+
+3.  **Frontend Setup:**
+
+    - Navigate to the frontend directory (from the root):
+      ```bash
+      cd frontend # Or cd ../frontend if you are in backend/
+      ```
+    - Install dependencies:
+      ```bash
+      npm install
+      ```
+    - **Run Frontend:** Start the development server:
+      ```bash
+      npm run dev
+      ```
+      _(Server runs on port 5173 by default)_
+
+4.  **Access Application:** Open `http://localhost:5173` (or the frontend port shown) in your browser.
 
 ## Next Steps
 
